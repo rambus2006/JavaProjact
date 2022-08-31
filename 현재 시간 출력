@@ -2,14 +2,17 @@ import java.io.*;
 
 
 public class Example {
+  //현재 시간을 문자열로 출력하는 변수
   static String timerBuffer; 
+  //정수형 시간
   static int oldTime; 
 
   public static void main(String[] args) {
-
+    //스톱워치 시작
     stopwatch(1); 
     System.out.println("Timer ON! 엔터 키를 누르면 종료합니다");
 
+    /스톱워치 끝(엔터키를 눌렀을 때)
     pause(); 
     stopwatch(0); 
     System.out.format("Timer OFF! 경과 시간: [%s]%n", timerBuffer); 
@@ -30,11 +33,14 @@ public class Example {
   // 정수로 된 시간을 문자열로 현재 시분초를 저장
   public static void secToHHMMSS(int secs) {
     int hour, min, sec;
-
+    //초(60으로 나눈 후 나머지 저장) 
     sec  = secs % 60;
+    //분(60으로 나눈 후 나머지 저장) 
     min  = secs / 60 % 60;
+    //시간(3600으로 나눈 후 나머지 저장) 
     hour = secs / 3600;
 
+    //현재 시간을 문자열로 출력
     timerBuffer = String.format("%02d:%02d:%02d", hour, min, sec);
   }
 
