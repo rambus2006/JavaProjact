@@ -16,7 +16,7 @@ public class Example {
     pause(); 
     stopwatch(0); 
     System.out.format("Timer OFF! 경과 시간: [%s]%n", timerBuffer); 
-  }
+  }//main메서드
 
 
   public static void stopwatch(int onOff) {
@@ -27,7 +27,7 @@ public class Example {
     if (onOff == 0) 
       secToHHMMSS(  ((int) System.currentTimeMillis() / 1000) - oldTime  );
 
-  }
+  }//스톱워치 메서드
 
 
   // 정수로 된 시간을 문자열로 현재 시분초를 저장
