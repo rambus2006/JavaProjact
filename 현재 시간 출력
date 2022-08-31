@@ -19,15 +19,15 @@ public class Example {
     pause(); 
     stopwatch(0); 
     //format : 현재 값 초기화 
-    System.out.format("Timer OFF! 경과 시간: [%s]%n", timerBuffer); 
+    System.out.format("Timer OFF! 경과 시간: [%s]%n", timerBuffer);                   //왜 [%s]이렇게 썼지
   }
 
   //스톱워치 메서드
   public static void stopwatch(int onOff) {
     // 타이머 켜기
     if (onOff == 1) 
-      oldTime = (int) System.currentTimeMillis() / 1000;
-    // 타이머 끄고, 시분초를 timerBuffer 에 저장
+      oldTime = (int) System.currentTimeMillis() / 1000;                              //1000으로 왜 나누지 
+    // 타이머 끄고, 시분초를 timerBuffer 에 저장                                        
     if (onOff == 0) 
       secToHHMMSS(  ((int) System.currentTimeMillis() / 1000) - oldTime  );
 
