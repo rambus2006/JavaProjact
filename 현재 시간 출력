@@ -44,7 +44,7 @@ public class Example {
     timerBuffer = String.format("%02d:%02d:%02d", hour, min, sec);
   }
 
-
+  //엔터키를 눌렀을 때(스톱워티를 정지시킬 때) 메서드
   public static void pause() {
     try {
       System.in.read();
