@@ -15,6 +15,7 @@ public class Example {
     /스톱워치 끝(엔터키를 눌렀을 때)
     pause(); 
     stopwatch(0); 
+    //format : 현재 값 초기화 
     System.out.format("Timer OFF! 경과 시간: [%s]%n", timerBuffer); 
   }//main메서드
 
