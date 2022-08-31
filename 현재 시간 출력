@@ -7,19 +7,22 @@ public class Example {
   //정수형 시간
   static int oldTime; 
 
+  //main메서드
   public static void main(String[] args) {
     //스톱워치 시작
+    //stopwatch()에 1이 들어가면 시작됨
     stopwatch(1); 
     System.out.println("Timer ON! 엔터 키를 누르면 종료합니다");
 
-    /스톱워치 끝(엔터키를 눌렀을 때)
+    //스톱워치 끝(엔터키를 눌렀을 때)
+    //stopwatch()에 0이 들어가면 끝남
     pause(); 
     stopwatch(0); 
     //format : 현재 값 초기화 
     System.out.format("Timer OFF! 경과 시간: [%s]%n", timerBuffer); 
-  }//main메서드
+  }
 
-
+  //스톱워치 메서드
   public static void stopwatch(int onOff) {
     // 타이머 켜기
     if (onOff == 1) 
@@ -28,7 +31,7 @@ public class Example {
     if (onOff == 0) 
       secToHHMMSS(  ((int) System.currentTimeMillis() / 1000) - oldTime  );
 
-  }//스톱워치 메서드
+  }
 
 
   // 정수로 된 시간을 문자열로 현재 시분초를 저장
